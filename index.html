@@ -1,0 +1,243 @@
+<html>
+
+<head>
+	
+	<link rel="stylesheet" 	type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" rel="stylesheet">
+	<link rel="stylesheet"  href="prism-atom-dark.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+
+
+	<script type="text/javascript" src="prism.js"></script>
+  	<script type="text/javascript" src="prism.ruby.js"></script>
+  	<title>Jesse DeSanto</title>
+  	<meta name="description" content="">
+</head>
+
+<body>
+	<div class="about-container">
+		<ul>
+			<li><a href="#" class="nav-link">ABOUT</a></li>
+			<li><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
+			<li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
+			<li><a href="#skills-tools" class="nav-link">SKILLS &amp; TOOLS</a></li>
+			<li class="hire-me"><a href="#hire-me" class="nav-link">HIRE ME</a></li>
+		</ul>
+
+		<div class="about">
+			<img src="me.jpg" class="me"/>>
+			<h1>Jesse DeSanto</h1>
+			
+			<h2>Web Developer</h2>
+				<hr />
+			
+				<p class="bio">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				</p>
+		</div>
+	</div>
+		<h3 id="code-samples">Code Snippets</h3>
+		
+		<hr class="yellow" />
+		
+		<div class="box">
+			<h4>Temperature Conversion</h4>
+			  <p>
+			    This ruby program will prompt the user for a temperature
+			    in degrees Celsius and let the user know what the
+			    corresponding temperature is in Fahrenheit.
+			  </p>
+		</div>
+		<div class="box">
+			<pre><code class="language-ruby">puts &quot;Celcius to Farenheit Conversion&quot;
+puts &quot;Please Enter Temperature in Celcius:&quot;
+celcius = gets.chomp
+
+def celcius_to_fahrenheit (temp)
+  return (temp.to_i * 1.8) + 32
+end
+
+fahrenheit  = celcius_to_fahrenheit(celcius)
+
+puts &quot;You have #{fahrenheit} degrees fahrenheit&quot;</code></pre>
+		</div>
+
+		<br class="clear" />
+
+		<hr class="yellow" />
+		
+		<div class="box">
+			  <pre><code class="language-ruby">
+puts &quot;Enter a number:&quot;
+input = gets.chomp
+
+def ordinal (n)
+  number = n.to_i
+  
+  if number % 100 == 11 || number % 100 == 12 || number % 20 == 13
+    return &quot;#{number}th&quot;
+  elsif  number % 10 == 1
+    return &quot;#{number}st&quot;
+  elsif  number % 10 == 2
+    return &quot;#{number}nd&quot;
+  elsif number % 10 == 3
+    return &quot;#{number}rd&quot;
+  else 
+    return &quot;#{number}th&quot;
+  end
+  
+end
+
+puts &quot;The number #{input}'s ordinal is #{ordinal(input)}&quot;</code></pre>
+		</div>
+		<div class="box">
+			<h4>Ordinal Challenge</h4>
+				  <p>
+				    This ruby program will convert a plain number
+				    to the ordinal of the number. So for example,
+				    if the user enters 2, it will display 2nd, if
+				    the user enters 3, it will display 3rd, etc.
+				  </p>
+		</div>
+		
+		<br class="clear" />
+		
+		<hr class="yellow" />
+		
+		<div class="box">
+		  <h4>Foobar</h4>
+			  <p>
+			    This ruby program is an adaptation of a classic technical
+			    interview problem which displays sequences
+			    of the Foobar pattern.
+			  </p>
+		</div>
+
+		<div class="box">
+		  <pre><code class="language-ruby">
+puts &quot;Enter a number:&quot;
+input = gets.chomp
+input = input.to_i
+fooBar = []
+n = 0
+
+while n != input
+  n = n+1
+    
+  if n % 3 == 0 &amp;&amp; n % 5 == 0
+    fooBar.push(&quot;FooBar&quot;)
+  elsif n % 3 == 0
+    fooBar.push(&quot;Foo&quot;)
+  elsif n % 5 == 0
+    fooBar.push(&quot;Bar&quot;)
+  else
+    fooBar.push(n)
+  end
+
+end
+
+puts fooBar
+				</code>
+			</pre>
+		</div>
+
+<br class="clear" /> 
+ 
+ <h3 id="web-apps">Web Apps</h3>
+ <hr class ="yellow" />
+ 	<div class="box">
+    <a href="https://splurty-jesse-desanto.herokuapp.com/" target="_blank">
+ 		<h4>Random Quote Generator <i class="fas fa-check-circle"></i></h4></a>
+ 		<img src="splurty.png" class="full-width">
+ 		  <p>A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.</p>
+ 	</div>
+ 	   <div class="box">
+      <a href="https://welp-jesse-desanto.herokuapp.com/" target="_blank">
+        
+      <h4>Yelp Clone <i class="fas fa-check-circle"></i></h4></a>
+    
+      <img src="nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <a href="https://flixter-jesse-desanto.herokuapp.com/" target="_blank">
+      <h4>Two-Sided Market Place <i class="fas fa-check-circle"></i></h4></a>
+      <img src="flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <h3 id="skills-tools">Skills &amp; Tools</h3>
+ 		<hr class="yellow" />
+		    <p class="skills-tools">
+		      Jesse has developed proficiency and expertise
+		      in the following programming languages and
+		      comfort with the following tools.
+		    </p>
+ 		<div class="icons">
+ 			<img src="github.png" class="icon"/>
+	 	    <img src="rubocop.png" class="icon" />
+		    <img src="trello.png" class="icon" />
+		    <img src="slack.png" class="icon" />
+		    <img src="codeship.png" class="icon" />
+
+		    <br class="clear" />
+		    <img src="skills.png" class="icon" />
+ 		</div>
+
+ 		<div class="contact-me" id="hire-me">
+ 			<h3 class="contact-headline">Contact</h3>
+ 			<hr class="yellow" />
+ 			    <p class="contact-info">
+		        Currently entertaining new opportunities.
+		        Please get in touch via email:
+		      	</p>
+		      	<p><a href="mailto:j.t.desanto@gmail.com" class="contact-link">j.t.desanto@gmail.com</a>
+		      	</p>
+ 		</div>
+ 		
+
+</body>
+
+
+</html>

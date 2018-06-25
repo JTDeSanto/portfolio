@@ -118,22 +118,21 @@ puts &quot;The number #{input}'s ordinal is #{ordinal(input)}&quot;</code></pre>
 		<div class="box">
 		  <pre><code class="language-ruby">
 puts &quot;Enter a number:&quot;
-input = gets.chomp
-input = input.to_i
+input = gets.chomp.to_i
 fooBar = []
 n = 0
 
 while n != input
-  n = n+1
+  n += 1
     
   if n % 3 == 0 &amp;&amp; n % 5 == 0
-    fooBar.push(&quot;FooBar&quot;)
+    fooBar<<(&quot;FooBar&quot;)
   elsif n % 3 == 0
-    fooBar.push(&quot;Foo&quot;)
+    fooBar<<(&quot;Foo&quot;)
   elsif n % 5 == 0
-    fooBar.push(&quot;Bar&quot;)
+    fooBar<<(&quot;Bar&quot;)
   else
-    fooBar.push(n)
+    fooBar<<(n)
   end
 
 end
